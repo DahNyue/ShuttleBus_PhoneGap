@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no"/>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+	<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+<!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    * Create your own at http://cspisawesome.com
+-->
+<link href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet" type="text/css"/>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+
+<!-- 소스복사 --> <script type="text/javascript" src="OxHXCN8zvyapqTAmGluN"></script><!-- 소스복사 끝 -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YOUR_CLIENT_ID"></script>
+<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<title>Shuttle's Info.</title>
+<!-- TITLE -->
+</head>
+<body>
+	<basic>__________________________________________</basic>
+	<div id="title">
+		<!-- class="blink" -->
+		<h1>
+			&lt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 임차 1호 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="img\Search_ICON.png" width="25px" height="25px"/>
+		</h1>
+	</div>
+	<!-- <hr size=2px color=#37899D > -->
+	<ul class="tabs">
+		<li class="active" rel="tab1">즐겨찾기</li>
+		<li rel="tab2">전체노선</li>
+	</ul>
+	<ul>
+		<li>
+			<table id="busTable" class="table">
+				<tr>
+					<table id="busInfo" class="info">
+						<tr>
+							<tr>
+								<td>
+									<div class="busType">
+										주간임차
+									</div>
+									<div class="busName">
+										임차 1호
+									</div>
+								</td>
+							</tr>
+							<td>
+								<div class="busMemo">
+									가오동↔갈마동, 13개 노선
+								</div>
+							</td>
+						</tr>
+					</table>
+				</tr>
+				<tr>
+					<table id="busStopList" class="busstop">
+						<tr class="busstopMenu">
+							<th colspan="2" class="m1">
+								예상도착시간
+							</th>
+							<th class="m2">
+								제보시간
+							</th>
+							<th class="m3">
+								정류장
+							</th>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:25
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+								07:24
+							</td>
+							<td class="m4">
+								<marquee scrolldelay=125> 가오동 동남 아파트 산내3거리 농협 앞 </marquee>
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:31
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+								07:31
+							</td>
+							<td class="m4">
+								<marquee scrolldelay=125> 천동 주공아파트 장난감백화점 앞</marquee>
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:36
+							</td>
+							<td class="m2">
+								●
+							</td>
+							<td class="m3">
+								07:36
+							</td>
+							<td class="m4">
+								효동네거리 송암주유소 앞
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:41
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+							</td>
+							<td class="m4">
+								신흥네거리 동부인력 앞
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:43
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+							</td>
+							<td class="m4">
+								<marquee scrolldelay=125> 대동오거리 5번 출구 SK텔레콤</marquee>
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:48
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+							</td>
+							<td class="m4">
+								성남네거리 현대오피스텔
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:53
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+							</td>
+							<td class="m4">
+								삼성네거리 삼성성결교회
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								07:57
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+							</td>
+							<td class="m4">
+								<marquee scrolldelay=125> 중촌네거리 푸우동물병원 앞 버스정류장</marquee>
+							</td>
+						</tr>
+						<tr class="busStopList">
+							<td class="m1">
+								08:07
+							</td>
+							<td class="m2">
+								○
+							</td>
+							<td class="m3">
+							</td>
+							<td class="m4">
+								용문네거리 뚜레쥬르빵집
+							</td>
+						</tr>
+					</table>
+				</tr>
+			</table>
+		</li>
+	</ul>
+
+
+
+	<button class="floatingReport" onclick="floatingReportClick()">+</button>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    /*
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    */
+    background-attachment: fixed;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background: url("../img/logo.png") no-repeat center top;
+    /* 170px x 200px */
+    position: absolute;
+    /* position in the center of the screen */
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    /* text area height */
+    width: 225px;
+    /* text area width */
+    text-align: center;
+    padding: 180px 0 0;
+    /* image height is 200px (bottom 20px are overlapped with text) */
+    margin: -115px 0 0 -112px;
+    /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position: left center;
+        padding: 75px 0 75px 170px;
+        /* padding-top + padding-bottom + text area = image height */
+        margin: -90px 0 0 -198px;
+        /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    }
+}
+basic {
+    position: fixed;
+    background-color: #FFF;
+    top: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: #37899D;
+}
+h1 {
+    color: #37899D;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    overflow: visible;
+    text-align: center;
+}
+h2 {}
+.busType {
+    /*버스 종류 ex)주간임차*/
+    color: #37899D;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #37899D;
+    border-radius: 20px;
+    padding: 3px 7px;
+    margin-right: 10px;
+    float: left;
+}
+.busName {
+    /*버스 명칭 ex)임차 1호*/
+    margin-left: 5px;
+    float: left;
+    font-size: 25px;
+}
+.busMemo {
+    /*버스 간단 설명*/
+    color: #AeAeAe;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.busstopMenu {
+    font-weight: lighter;
+    font-size: 13px;
+    width: 100%;
+    background-color: #F1F1F1;
+    border: 0.5px solid #AFAFAF;
+    padding: 5px 0;
+    border-left: 0;
+    border-right: 0;
+    position: absolute;
+    top: 180px;
+    right: 0;
+
+}
+.busstopMenu .m1 {
+    width: 30%;
+    padding-left: 30px;
+}
+.busstopMenu .m2 {
+    width: 25%;
+    color: #37899D;
+    padding-left: 35px;
+}
+.busstopMenu .m3 {
+    width: 45%;
+    padding-left: 10px;
+
+}
+.busStopList {
+    font-size: 16px;
+    font-family: "";
+    width: 100%;
+}
+.busStopList .m1 {
+    position: relative;
+    top: 35px;
+    padding-top: 30px;
+    width: 20%;
+}
+.busStopList .m2 {
+    position: relative;
+    top: 35px;
+    color: #37899D;
+    width: 10%;
+    padding-top: 30px;
+}
+.busStopList .m3 {
+    position: relative;
+    top: 35px;
+    color: #37899D;
+    width: 15%;
+    padding-top: 30px;
+}
+.busStopList .m4 {
+    position: relative;
+    top: 35px;
+    width: 55%;
+    padding-top: 30px;
+}
+table.info {
+    /*버스 정보 테이블*/
+}
+table.busstop {
+    /*정류장 정보 테이블*/
+
+}
+table.busstop list {
+    /*정류장 정보 테이블의 요소*/
+
+}
+ul.tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 32px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    font-size: 15px;
+}
+ul.tabs li {
+    font-size: 18px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    height: 31px;
+    line-height: 31px;
+    border: 0 solid #eee;
+    border-left: none;
+    font-weight: bold;
+    background: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+}
+ul.tabs li.active {
+    background: #FFFFFF;
+    border-bottom: 2px solid #37899D;
+    color: #37899D;
+}
+.tab_container {
+    border: 0 solid #eee;
+    border-top: none;
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #FFFFFF;
+}
+.tab_content {
+    padding: 0;
+    font-size: 12px;
+}
+.tab_container .tab_content ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.tab_container .tab_content ul li {
+    padding-top: 5px;
+    list-style: none;
+}
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+.button {
+    width: 100%;
+    font-size: 15px;
+    height: 30px;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: #FDFDFD;
+}
+.button:active {
+    color: #37899D;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    font-weight: bold;
+    border-color: #37899D;
+}
+
+.event {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0 30px;
+    padding: 2px 0;
+}
+
+.event.listening {
+    /*background-color:#333333;*/
+    backgroud-color: #4B946A;
+    display: block;
+}
+
+.event.received {
+    background-color: #4B946A;
+    display: none;
+}
+
+.floatingReport {
+  position: fixed;
+  background:#37899D;
+  color:#FFF;
+  width:50px;
+  height:50px;
+  bottom:30px;
+  right:30px;
+  z-index:50px;
+  font-size:30px;
+  border-radius:100%;
+  outline:none;
+  border:none;
+  box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;
+}
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: fade 4500ms infinite;
+    -webkit-animation: fade 4500ms infinite;
+}
